@@ -781,127 +781,54 @@
           </p>
         </div>
 
-        <!-- Magazine 5/7 grid -->
-        <div class="grid grid-cols-12 gap-4">
+        <!-- Magazine grid: 1 hero wide + 2 retrato lado-a-lado -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-          <!-- TODO: substituir picsum por fotos reais -->
-
-          <div class="col-span-12 lg:col-span-7 flex flex-col gap-4 reveal">
-            <figure class="relative">
-              <div class="aspect-[16/10] overflow-hidden bg-black">
-                <img src="fig-01-vista-principal.jpg"
-                     alt="Vista principal do estúdio VV Studios — cyclorama, softboxes e lounge"
-                     width="1600" height="1067"
-                     class="w-full h-full object-cover photo-treatment"
-                     loading="lazy" decoding="async" />
-              </div>
-              <figcaption class="mt-3 flex items-center gap-3 text-[11px] uppercase tracking-btn font-semibold text-text-soft">
-                <span class="text-red-500">FIG. 01</span>
-                <span class="w-px h-3 bg-text-soft/40"></span>
-                <span>Vista principal · 4 câmeras Full HD</span>
-              </figcaption>
-            </figure>
-
-            <!-- Card de specs preenche o espaço vazio + dá info adicional -->
-            <div class="card p-6 md:p-8 flex-1 flex flex-col justify-center">
-              <p class="text-[11px] uppercase tracking-btn font-semibold text-red-500 mb-5">Equipamento incluído</p>
-              <div class="grid grid-cols-2 gap-5">
-                <div>
-                  <div class="font-display text-4xl md:text-5xl font-extrabold tracking-display text-white">4</div>
-                  <div class="text-[11px] uppercase tracking-btn text-text-soft mt-1.5">Câmeras Full HD</div>
-                </div>
-                <div>
-                  <div class="font-display text-4xl md:text-5xl font-extrabold tracking-display text-white">4</div>
-                  <div class="text-[11px] uppercase tracking-btn text-text-soft mt-1.5">Microfones Broadcast</div>
-                </div>
-                <div>
-                  <div class="font-display text-4xl md:text-5xl font-extrabold tracking-display text-white">4</div>
-                  <div class="text-[11px] uppercase tracking-btn text-text-soft mt-1.5">Softboxes Profissionais</div>
-                </div>
-                <div>
-                  <div class="font-display text-4xl md:text-5xl font-extrabold tracking-display text-white">55<span class="text-2xl">"</span></div>
-                  <div class="text-[11px] uppercase tracking-btn text-text-soft mt-1.5">TV de Apoio</div>
-                </div>
-              </div>
-              <p class="text-xs text-text-soft mt-5 pt-5 border-t border-line-soft">
-                + Técnico audiovisual incluído em todos os planos · Cyclorama branco + green screen disponíveis
-              </p>
-            </div>
-          </div>
-
-          <div class="col-span-12 lg:col-span-5 grid grid-cols-1 gap-4">
-            <figure class="reveal">
-              <div class="aspect-[4/3] overflow-hidden bg-black">
-                <img src="fig-02-microfones.jpg"
-                     alt="Microfone broadcast com iluminação cinematográfica"
-                     width="1200" height="800"
-                     class="w-full h-full object-cover photo-treatment"
-                     loading="lazy" decoding="async" />
-              </div>
-              <figcaption class="mt-3 flex items-center gap-3 text-[11px] uppercase tracking-btn font-semibold text-text-soft">
-                <span class="text-red-500">FIG. 02</span>
-                <span class="w-px h-3 bg-text-soft/40"></span>
-                <span>Microfones broadcast</span>
-              </figcaption>
-            </figure>
-            <figure class="reveal">
-              <div class="aspect-[4/3] overflow-hidden bg-black">
-                <img src="fig-03-iluminacao.jpg"
-                     alt="Iluminação softbox profissional + green screen"
-                     width="1200" height="800"
-                     class="w-full h-full object-cover photo-treatment"
-                     loading="lazy" decoding="async" />
-              </div>
-              <figcaption class="mt-3 flex items-center gap-3 text-[11px] uppercase tracking-btn font-semibold text-text-soft">
-                <span class="text-red-500">FIG. 03</span>
-                <span class="w-px h-3 bg-text-soft/40"></span>
-                <span>Iluminação softbox profissional</span>
-              </figcaption>
-            </figure>
-          </div>
-
-          <figure class="col-span-12 md:col-span-4 relative reveal">
-            <div class="aspect-[4/5] overflow-hidden bg-black">
-              <img src="fig-04-camera.jpg"
-                   alt="Câmera Sony Full HD com lâmpada Edison no estúdio podcast"
-                   width="900" height="1350"
+          <!-- Hero shot: vista principal -->
+          <figure class="md:col-span-2 relative reveal">
+            <div class="aspect-[16/9] overflow-hidden bg-black">
+              <img src="fig-01-vista-principal.jpg"
+                   alt="Vista principal do estúdio VV Studios — cyclorama, softboxes e lounge"
+                   width="1600" height="900"
                    class="w-full h-full object-cover photo-treatment"
                    loading="lazy" decoding="async" />
             </div>
             <figcaption class="mt-3 flex items-center gap-3 text-[11px] uppercase tracking-btn font-semibold text-text-soft">
-              <span class="text-red-500">FIG. 04</span>
+              <span class="text-red-500">FIG. 01</span>
               <span class="w-px h-3 bg-text-soft/40"></span>
-              <span>Câmera Full HD</span>
+              <span>Vista principal · 4 câmeras Full HD</span>
             </figcaption>
           </figure>
 
-          <figure class="col-span-12 md:col-span-4 relative reveal">
+          <!-- Detalhe 1: bancada podcast (o "money shot") -->
+          <figure class="relative reveal">
             <div class="aspect-[4/5] overflow-hidden bg-black">
               <img src="fig-05-bancada.jpg"
                    alt="Bancada do podcast com microfone broadcast e luz ambiente"
-                   width="900" height="1350"
+                   width="900" height="1125"
                    class="w-full h-full object-cover photo-treatment"
                    loading="lazy" decoding="async" />
             </div>
             <figcaption class="mt-3 flex items-center gap-3 text-[11px] uppercase tracking-btn font-semibold text-text-soft">
-              <span class="text-red-500">FIG. 05</span>
+              <span class="text-red-500">FIG. 02</span>
               <span class="w-px h-3 bg-text-soft/40"></span>
               <span>Bancada · microfone broadcast</span>
             </figcaption>
           </figure>
 
-          <figure class="col-span-12 md:col-span-4 relative reveal">
+          <!-- Detalhe 2: close-up microfone cinematográfico -->
+          <figure class="relative reveal">
             <div class="aspect-[4/5] overflow-hidden bg-black">
-              <img src="fig-06-ambiente.jpg"
-                   alt="Ambiente moody do estúdio com microfone e iluminação cénica"
-                   width="900" height="1350"
+              <img src="fig-02-microfones.jpg"
+                   alt="Microfone broadcast com iluminação cinematográfica"
+                   width="900" height="1125"
                    class="w-full h-full object-cover photo-treatment"
                    loading="lazy" decoding="async" />
             </div>
             <figcaption class="mt-3 flex items-center gap-3 text-[11px] uppercase tracking-btn font-semibold text-text-soft">
-              <span class="text-red-500">FIG. 06</span>
+              <span class="text-red-500">FIG. 03</span>
               <span class="w-px h-3 bg-text-soft/40"></span>
-              <span>Ambiente cinematográfico</span>
+              <span>Microfones broadcast</span>
             </figcaption>
           </figure>
 
