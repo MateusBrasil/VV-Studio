@@ -439,7 +439,7 @@
   <a href="#main" class="skip-link">Saltar para conteúdo</a>
 
   <!-- ===== HEADER ===== -->
-  <header class="fixed top-0 left-0 right-0 z-50 nav-header border-b border-line/30">
+  <header class="absolute top-0 left-0 right-0 z-50 nav-header border-b border-line/30">
     <div class="max-w-7xl mx-auto px-4 md:px-6 h-full flex items-center justify-between gap-3">
       <a href="#hero" class="flex items-center gap-3 shrink-0" aria-label="VV Studios — Início">
         <img src="Logo%20VV%20Studio/Logo%20att.png"
@@ -1245,16 +1245,10 @@
       </p>
     </section>
 
-    <!-- ===== CTA FINAL ===== -->
-    <section class="relative py-32 md:py-40 overflow-hidden">
-      <div class="absolute inset-0 -z-10">
-        <img src="cta-final-bg.jpg"
-             alt="" width="1600" height="1067"
-             class="w-full h-full object-cover photo-treatment"
-             loading="lazy" decoding="async" />
-        <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/85 to-ink/30"></div>
-        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-red-500/20 blur-[120px]"></div>
-      </div>
+    <!-- ===== CTA FINAL — editorial white ===== -->
+    <section class="relative py-32 md:py-40 overflow-hidden bg-white">
+      <!-- Glow vermelho sutil (toque brand sobre o branco) -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-red-500/10 blur-[120px]" aria-hidden="true"></div>
 
       <div class="relative max-w-3xl mx-auto px-6 text-center">
 
@@ -1264,13 +1258,13 @@
           <span class="w-12 h-px bg-red-500"></span>
         </div>
 
-        <h2 class="font-display text-4xl md:text-6xl lg:text-7xl leading-[1] tracking-display mb-8">
+        <h2 class="font-display text-4xl md:text-6xl lg:text-7xl leading-[1] tracking-display mb-8 text-gray-900">
           O TEU PRÓXIMO<br/>
           EPISÓDIO COMEÇA<br/>
           <span class="text-red-500">COM UM WHATSAPP</span>.
         </h2>
 
-        <p class="text-text-muted text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+        <p class="text-gray-600 text-lg max-w-xl mx-auto mb-10 leading-relaxed">
           Resposta em poucos minutos. Conta-nos o que pretendes gravar e ajustamos o plano à tua medida.
         </p>
 
@@ -1281,10 +1275,10 @@
           Reservar pelo WhatsApp
         </a>
 
-        <p class="mt-10 text-xs uppercase tracking-btn font-semibold text-text-soft">
+        <p class="mt-10 text-xs uppercase tracking-btn font-semibold text-gray-500">
           Av. São Gonçalo 81 LJ 14 · 4810-428 Guimarães<br class="md:hidden"/>
           <span class="hidden md:inline"> · </span>
-          <a href="https://www.instagram.com/vvstudios.pt/" target="_blank" rel="noopener" class="hover:text-white transition">@vvstudios.pt</a>
+          <a href="https://www.instagram.com/vvstudios.pt/" target="_blank" rel="noopener" class="hover:text-gray-900 transition">@vvstudios.pt</a>
         </p>
       </div>
     </section>
