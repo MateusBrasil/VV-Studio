@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Aluguer de Estúdio para Podcast em Guimarães | VV Studios</title>
+  <meta name="description" content="Grava o teu podcast num estúdio profissional em Guimarães. 4 câmeras 4K, 4 microfones, edição incluída no Premium. É só chegar e gravar. Desde 50€/episódio." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://vvstudios.pt/podcast" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Aluguer de Estúdio para Podcast | VV Studios Guimarães" />
+  <meta property="og:description" content="Grava o teu podcast num estúdio profissional. 4 câmeras 4K, 4 microfones, edição incluída. É só chegar e gravar." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_PT" />
+  <meta property="og:image" content="hero-bg.jpg" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="1067" />
+  <meta property="og:site_name" content="VV Studios" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Estúdio Profissional para Podcast — VV Studios Guimarães" />
+  <meta name="twitter:description" content="É só chegar e gravar. Desde 50€/episódio." />
+  <meta name="twitter:image" content="hero-bg.jpg" />
+
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- Favicon (usa a logo) -->
+  <link rel="icon" type="image/png" href="Logo%20VV%20Studio/Logo%20att.png" />
+  <link rel="apple-touch-icon" href="Logo%20VV%20Studio/Logo%20att.png" />
+
+  <!-- Schema.org LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "VV Studios",
+    "description": "Hub de produção audiovisual em Guimarães. Aluguer de estúdio profissional para podcasts, sessões fotográficas e produção de vídeo.",
+    "image": "https://vvstudios.pt/galeria/vvstudio01.jpg",
+    "url": "https://vvstudios.pt/",
+    "telephone": "+351 [TODO]",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. São Gonçalo 81 LJ 14",
+      "addressLocality": "Guimarães",
+      "postalCode": "4810-428",
+      "addressCountry": "PT"
+    },
+    "priceRange": "€€",
+    "sameAs": ["https://www.instagram.com/vvstudios.pt/"]
+  }
+  </script>
+
+  <!-- Schema.org FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Onde fica o estúdio?", "acceptedAnswer": { "@type": "Answer", "text": "Em Guimarães, centro — Av. São Gonçalo 81 LJ 14. Estacionamento pago à porta." } },
+      { "@type": "Question", "name": "Quanto custa gravar um episódio?", "acceptedAnswer": { "@type": "Answer", "text": "Desde 50€ + IVA por episódio no plano Silver. Packs de 5 com 10% e packs de 10 com 15% de desconto." } },
+      { "@type": "Question", "name": "Quanto tempo demora a entrega?", "acceptedAnswer": { "@type": "Answer", "text": "Silver/Gold: ficheiro bruto em 24h. Premium: episódio editado em 3 dias úteis." } },
+      { "@type": "Question", "name": "Como funciona a reserva?", "acceptedAnswer": { "@type": "Answer", "text": "Reserva com 50% adiantado. Restante no dia da gravação. Contacto via WhatsApp." } }
+    ]
+  }
+  </script>
+
+  <!-- Preload hero poster (mostrado enquanto video carrega) -->
+  <link rel="preload" as="image" href="hero-bg.jpg" fetchpriority="high" />
+
+  <!-- Fonts: Manrope (free alternativa a almarena — geométrico, similar tracking properties) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN (preview) — config alinhada com DESIGN.md extraído via design-md skill -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            /* Tokens extraídos via design-md de vvstudios.pt */
+            ink: '#000000',
+            card: '#141414',
+            'card-2': '#1a1a1a',
+            line: '#364153',
+            'line-soft': '#262626',
+            red: {
+              500: '#e31e26',  /* primary */
+              600: '#c41820',
+              700: '#740a0d'   /* hover */
+            },
+            wa: '#25D366',
+            'wa-hover': '#1DA851',
+            'text-muted': '#d4d4d8',
+            'text-soft': '#9f9fa9'
+          },
+          fontFamily: {
+            display: ['Manrope', 'almarena', 'Arial', 'sans-serif'],
+            sans: ['Manrope', 'almarena', 'Arial', 'sans-serif']
+          },
+          letterSpacing: {
+            'display': '-0.02em',
+            'tight-h': '-0.01em',
+            'btn': '0.05em',
+            'btn-sm': '0.025em'
+          },
+          borderRadius: {
+            none: '0px'  /* DESIGN.md: button_radius=0, card_radius=0, input_radius=0 */
+          },
+          boxShadow: {
+            'btn-red': '0 10px 20px rgba(239, 68, 68, 0.30)',
+            'card': '0 10px 15px -3px rgba(0,0,0,0.10), 0 4px 6px -4px rgba(0,0,0,0.10)',
+            'card-hover': '0 25px 50px -12px rgba(0,0,0,0.40)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* ===========================================
+       VV STUDIOS — Design System
+       Source: design-md extraction de vvstudios.pt
+       Archetype: polaris-friendly (100% confidence)
+       =========================================== */
+
+    html { scroll-behavior: smooth; background: #000000; }
+    body {
+      font-family: 'Manrope', 'almarena', Arial, sans-serif;
+      background: #000000;
+      color: #ffffff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      letter-spacing: -0.01em;
+    }
+
+    .font-display {
+      font-family: 'Manrope', 'almarena', Arial, sans-serif;
+      letter-spacing: -0.02em;
+      font-weight: 700;
+    }
+
+    *:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 1px #ef4444;
+    }
+
+    .skip-link { position: absolute; left: -9999px; top: 0; }
+    .skip-link:focus {
+      left: 16px; top: 16px;
+      background: #e31e26; color: white;
+      padding: 8px 16px; z-index: 100;
+    }
+
+    /* (Override global de prefers-reduced-motion removido — utilizador quer animacoes
+       independentemente da pref do SO. O .reveal abaixo ainda usa @media no-preference
+       so para fade-in inicial, que e seguro de saltar.) */
+
+    /* Reveal */
+    @media (prefers-reduced-motion: no-preference) {
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Photo treatment editorial */
+    .photo-treatment { filter: contrast(1.02) saturate(0.95) brightness(0.92); }
+
+    /* ===== BUTTONS — PREMIUM PILL + GRADIENT + GLASS HIGHLIGHT ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 28px;
+      font-family: 'Manrope', 'almarena', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border-radius: 999px; /* PILL — premium */
+      transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      will-change: transform;
+      isolation: isolate;
+    }
+    /* Inner top highlight (glass effect) */
+    .btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0) 50%);
+      pointer-events: none;
+      border-radius: inherit;
+      z-index: -1;
+    }
+    @media (min-width: 768px) {
+      .btn { padding: 13px 32px; font-size: 14px; }
+    }
+
+    .btn-primary {
+      background: linear-gradient(180deg, #e31e26 0%, #b81a21 100%);
+      color: #ffffff;
+      border: 1px solid rgba(255,255,255,0.06);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.22),
+        0 4px 14px rgba(227, 30, 38, 0.28);
+    }
+    .btn-primary:hover {
+      background: linear-gradient(180deg, #f02530 0%, #c41820 100%);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.28),
+        0 10px 28px rgba(227, 30, 38, 0.55);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(16px) saturate(150%);
+      -webkit-backdrop-filter: blur(16px) saturate(150%);
+      color: #ffffff;
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.10);
+      border-color: rgba(255,255,255,0.28);
+      transform: translateY(-1px);
+    }
+
+    .btn-wa {
+      background: linear-gradient(180deg, #25D366 0%, #1DA851 100%);
+      color: #ffffff;
+      border: 1px solid rgba(255,255,255,0.06);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.22),
+        0 4px 14px rgba(37, 211, 102, 0.28);
+    }
+    .btn-wa:hover {
+      background: linear-gradient(180deg, #2DD56F 0%, #1FB058 100%);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.28),
+        0 10px 28px rgba(37, 211, 102, 0.55);
+      transform: translateY(-2px);
+    }
+
+    .btn-lg { padding: 15px 38px; font-size: 14px; }
+    @media (min-width: 768px) {
+      .btn-lg { padding: 17px 42px; font-size: 15px; }
+    }
+
+    /* ===== GLASS UTILITY ===== */
+    .glass {
+      background: rgba(20, 20, 20, 0.55);
+      backdrop-filter: blur(20px) saturate(160%);
+      -webkit-backdrop-filter: blur(20px) saturate(160%);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .glass-strong {
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* ===== CARDS — GLASS + RADIUS SUBTIL ===== */
+    .card {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px) saturate(150%);
+      -webkit-backdrop-filter: blur(20px) saturate(150%);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      overflow: hidden;
+    }
+    .card:hover {
+      border-color: rgba(255, 255, 255, 0.14);
+      transform: translateY(-3px);
+      box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    /* ===== BADGES — GLASS PILL ===== */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 14px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.18);
+      color: #ffffff;
+      border-radius: 999px;
+    }
+    .badge-red {
+      background: linear-gradient(180deg, #e31e26 0%, #b81a21 100%);
+      border-color: rgba(255,255,255,0.12);
+      color: #ffffff;
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.25),
+        0 4px 12px rgba(227, 30, 38, 0.35);
+    }
+
+    /* ===== EYEBROW (tracking 0.05em uppercase) ===== */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #e31e26;
+    }
+    .eyebrow::before {
+      content: '';
+      width: 28px;
+      height: 1px;
+      background: #e31e26;
+    }
+
+    /* ===== INPUT (0 radius, transparent bg, border #364153) ===== */
+    .input {
+      width: 100%;
+      background: transparent;
+      color: #ffffff;
+      border: none;
+      border-bottom: 1px solid #364153;
+      padding: 12px 0;
+      font-family: inherit;
+      font-size: 14px;
+      letter-spacing: 0.05em;
+      border-radius: 0;
+      transition: all 0.3s;
+    }
+    .input:focus {
+      outline: none;
+      border-bottom-color: #ef4444;
+      box-shadow: 0 1px 0 0 #ef4444;
+    }
+
+    /* ===== NAV — GLASS PREMIUM ===== */
+    .nav-header {
+      min-height: 104px;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    @media (min-width: 768px) {
+      .nav-header { min-height: 120px; }
+    }
+
+    /* Subtle grain */
+    .grain::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='nf'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23nf)'/%3E%3C/svg%3E");
+      opacity: 0.04;
+      mix-blend-mode: overlay;
+      pointer-events: none;
+    }
+
+    /* Star ratings */
+    .star { color: #e31e26; }
+
+    /* ===== INFINITE CAROUSEL (avaliações) — Aceternity reference ===== */
+    .scroller {
+      position: relative;
+      z-index: 20;
+      max-width: 100%;
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(to right, transparent, white 20%, white 80%, transparent);
+      mask-image: linear-gradient(to right, transparent, white 20%, white 80%, transparent);
+    }
+    .scroller__inner {
+      display: flex;
+      gap: 1rem;
+      width: max-content;
+      flex-wrap: nowrap;
+      padding: 1rem 0;
+      animation: scroll-infinite 100s linear infinite;
+      will-change: transform;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+    }
+    .scroller__inner:hover {
+      animation-play-state: paused;
+    }
+    @keyframes scroll-infinite {
+      0%   { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(calc(-50% - 0.5rem), 0, 0); }
+    }
+    .testi-card {
+      width: 350px;
+      flex-shrink: 0;
+      padding: 24px 32px;
+      background: linear-gradient(180deg, #111827, #000000);
+      border: 1px solid #334155;
+      border-bottom: 0;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: border-color 0.3s ease;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+    }
+    .testi-card:hover {
+      border-color: rgba(227, 30, 38, 0.5);
+    }
+    @media (min-width: 768px) {
+      .testi-card { width: 450px; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar para conteúdo</a>
+
+  <!-- ===== HEADER ===== -->
+  <header class="fixed top-0 left-0 right-0 z-50 nav-header border-b border-line/30">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 h-full flex items-center justify-between gap-3">
+      <a href="#hero" class="flex items-center gap-3 shrink-0" aria-label="VV Studios — Início">
+        <img src="Logo%20VV%20Studio/Logo%20att.png"
+             alt="VV Studios — Podcast & Mídia"
+             width="200" height="200"
+             class="h-14 md:h-24 w-auto"
+             decoding="async" />
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-xs font-semibold tracking-btn uppercase text-white/70">
+        <a href="#videos" class="hover:text-white transition">Vídeos</a>
+        <a href="#espaco" class="hover:text-white transition">Estúdio</a>
+        <a href="#planos" class="hover:text-white transition">Planos</a>
+        <a href="#avaliacoes" class="hover:text-white transition">Avaliações</a>
+      </nav>
+
+      <a href="#planos"
+         data-cta="header-cta" data-section="header"
+         class="btn btn-primary !px-4 md:!px-10 !text-[11px] md:!text-sm tracking-btn shrink-0">
+        <span>Orçamento</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== HERO ===== -->
+    <section id="hero" class="relative pt-32 pb-16 md:pt-56 md:pb-32 overflow-hidden grain">
+      <div class="absolute inset-0 overflow-hidden" style="z-index: 0;">
+        <!-- Hero video background (autoplay muted loop) -->
+        <video id="hero-video"
+               autoplay muted loop playsinline preload="auto"
+               poster="hero-bg.jpg"
+               aria-hidden="true"
+               style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; filter: brightness(1.0) saturate(1.15) contrast(1.0);">
+          <source src="hero-video.mp4" type="video/mp4" />
+          <source src="hero-video.webm" type="video/webm" />
+        </video>
+        <!-- Overlay base — escurece tudo de forma consistente -->
+        <div class="absolute inset-0" style="background: rgba(0,0,0,0.5);"></div>
+        <!-- Gradient horizontal: zona texto mais escura à esquerda -->
+        <div class="absolute inset-0" style="background: linear-gradient(90deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.15) 100%);"></div>
+        <!-- Gradient bottom para CTAs -->
+        <div class="absolute inset-0" style="background: linear-gradient(180deg, transparent 0%, transparent 60%, rgba(0,0,0,0.7) 90%, #000 100%);"></div>
+        <!-- Red glow no topo (mantém identidade visual) -->
+        <div class="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-red-500/20 blur-[120px]"></div>
+      </div>
+
+      <div class="max-w-6xl mx-auto px-5 md:px-6 relative" style="z-index: 10;">
+        <!-- Eyebrow com linha acento (mais editorial em mobile) -->
+        <div class="flex items-center gap-3 mb-6 md:mb-8 reveal">
+          <span class="h-px w-8 bg-red-500" aria-hidden="true"></span>
+          <span class="eyebrow !mb-0">Estúdio Profissional · Guimarães</span>
+        </div>
+
+        <h1 class="font-display text-[2.75rem] leading-[0.95] md:text-7xl lg:text-8xl md:leading-[1] tracking-display mb-6 md:mb-8 reveal text-white" data-reveal-delay="100">
+          O TEU PODCAST<br/>
+          COMEÇA <span class="text-red-500">AQUI</span>.
+        </h1>
+
+        <p class="text-base md:text-xl text-white/85 max-w-2xl mb-8 md:mb-10 leading-relaxed reveal" data-reveal-delay="200">
+          Estúdio profissional com <strong class="text-white font-semibold">4 câmeras Full HD, 4 microfones e edição incluída</strong>.
+          É só chegares e gravares. Episódio editado em 3 dias úteis.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-3 mb-10 md:mb-12 reveal" data-reveal-delay="300">
+          <a href="#planos"
+             data-cta="hero-primary" data-section="hero"
+             class="btn btn-primary btn-lg w-full sm:w-auto">
+            Reservar Sessão
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+          <a href="#espaco"
+             data-cta="hero-secondary" data-section="hero"
+             class="btn btn-secondary btn-lg w-full sm:w-auto">
+            Conhecer o Estúdio
+          </a>
+        </div>
+
+        <!-- Spec sheet — grid 2x2 editorial em mobile, inline em desktop -->
+        <div class="grid grid-cols-2 md:flex md:flex-wrap md:items-center gap-x-6 gap-y-4 md:gap-y-3 reveal border-t border-white/10 md:border-0 pt-6 md:pt-0" data-reveal-delay="400">
+          <div class="flex items-baseline gap-2.5">
+            <span class="font-display text-2xl md:text-base font-bold text-red-500 leading-none">4</span>
+            <span class="text-[10px] md:text-xs uppercase tracking-btn-sm font-semibold text-text-soft leading-tight">Câmeras<br class="md:hidden"/> Full HD</span>
+          </div>
+          <div class="flex items-baseline gap-2.5">
+            <span class="font-display text-2xl md:text-base font-bold text-red-500 leading-none">4</span>
+            <span class="text-[10px] md:text-xs uppercase tracking-btn-sm font-semibold text-text-soft leading-tight">Microfones</span>
+          </div>
+          <div class="flex items-baseline gap-2.5">
+            <span class="font-display text-2xl md:text-base font-bold text-red-500 leading-none">∞</span>
+            <span class="text-[10px] md:text-xs uppercase tracking-btn-sm font-semibold text-text-soft leading-tight">Edição<br class="md:hidden"/> Premium</span>
+          </div>
+          <div class="flex items-baseline gap-2.5">
+            <span class="font-display text-2xl md:text-base font-bold text-red-500 leading-none">3</span>
+            <span class="text-[10px] md:text-xs uppercase tracking-btn-sm font-semibold text-text-soft leading-tight">Dias<br class="md:hidden"/> de entrega</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TRUST BAR ===== -->
+    <section class="border-y border-line-soft">
+      <div class="max-w-7xl mx-auto px-6 py-5 flex flex-wrap items-center justify-center md:justify-between gap-4 text-[11px] uppercase tracking-btn font-semibold text-text-soft">
+        <span class="flex items-center gap-2">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#e31e26" stroke-width="2" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          Equipamento última geração
+        </span>
+        <span class="hidden md:flex items-center gap-2">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#e31e26" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 6 12 12 16 14"/></svg>
+          Episódio em 3 dias úteis
+        </span>
+        <span class="flex items-center gap-2">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#e31e26" stroke-width="2" aria-hidden="true"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          Equipa técnica incluída
+        </span>
+        <span class="hidden md:flex items-center gap-2">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#e31e26" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Guimarães · Estacionamento
+        </span>
+      </div>
+    </section>
+
+    <!-- ===== VÍDEOS ===== -->
+    <section id="videos" class="py-24 md:py-32">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <div class="max-w-2xl mb-14">
+          <div class="eyebrow mb-5">Dá O Papo Podcast · Gravado aqui</div>
+          <h2 class="font-display text-4xl md:text-6xl leading-[1] tracking-display mb-5 reveal">
+            VÊ QUEM JÁ GRAVOU<br/>
+            <span class="text-red-500">NO ESTÚDIO</span>.
+          </h2>
+          <p class="text-text-muted text-lg leading-relaxed reveal" data-reveal-delay="100">
+            Episódios do Dá O Papo Podcast e outros criadores que escolheram a VV Studios.
+            Cada episódio entregue com qualidade broadcast.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+          <!--
+            TODO MATEUS: quando tiveres os URLs reais do YouTube, substitui cada bloco
+            <a class="video-placeholder"...> pelo iframe correspondente:
+
+            <iframe src="https://www.youtube.com/embed/[VIDEO_ID]?rel=0"
+                    title="..." allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture"
+                    allowfullscreen loading="lazy" class="absolute inset-0 w-full h-full"
+                    width="1280" height="720"></iframe>
+
+            Os placeholders abaixo mantêm o layout intacto e sem erros 153 do YouTube.
+          -->
+
+          <!-- VÍDEO 1 — DESTAQUE -->
+          <article class="lg:col-span-2 lg:row-span-2 card reveal group">
+            <a href="https://www.instagram.com/vvstudios.pt/" target="_blank" rel="noopener"
+               data-cta="video-1" data-section="videos"
+               class="block relative aspect-video bg-black overflow-hidden group/video">
+              <img src="podcast-1-ele-meteu.jpg"
+                   alt="Dá O Papo Podcast — Ele Meteu Essa?! gravado na VV Studios"
+                   width="1280" height="720"
+                   class="w-full h-full object-cover transition-transform duration-700 group-hover/video:scale-105"
+                   loading="lazy" decoding="async" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+
+              <!-- Play button -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-24 h-24 rounded-full flex items-center justify-center transition-all duration-500 group-hover/video:scale-110"
+                     style="background: linear-gradient(180deg, #e31e26 0%, #b81a21 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,0.28), 0 12px 40px rgba(227, 30, 38, 0.6);">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="white" aria-hidden="true" style="margin-left: 4px;"><path d="M8 5v14l11-7L8 5z"/></svg>
+                </div>
+              </div>
+
+              <!-- Badge canto -->
+              <div class="absolute top-4 left-4 badge-red">
+                Em destaque
+              </div>
+              <div class="absolute bottom-4 right-4 inline-flex items-center gap-1.5 text-[11px] uppercase tracking-btn text-white/80 font-semibold">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                YouTube
+              </div>
+            </a>
+
+            <div class="p-6">
+              <div class="flex items-center gap-3 text-[11px] uppercase tracking-btn text-text-soft mb-2">
+                <span>Dá O Papo Podcast</span>
+                <span class="w-1 h-1 rounded-full bg-text-soft"></span>
+                <span>Em destaque</span>
+              </div>
+              <h3 class="font-display text-xl font-bold leading-tight">Ele Meteu Essa?! · Amigo é sincero demais...</h3>
+            </div>
+          </article>
+
+          <!-- VÍDEO 2 -->
+          <article class="card reveal">
+            <a href="https://www.instagram.com/vvstudios.pt/" target="_blank" rel="noopener"
+               data-cta="video-2" data-section="videos"
+               class="block relative aspect-video bg-black overflow-hidden group/video">
+              <img src="podcast-2-imigrante.jpg"
+                   alt="Dá O Papo Podcast — A História de Imigrante com Suely Lessa"
+                   width="1280" height="720"
+                   class="w-full h-full object-cover transition-transform duration-700 group-hover/video:scale-105"
+                   loading="lazy" decoding="async" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-16 h-16 rounded-full flex items-center justify-center transition-all duration-500 group-hover/video:scale-110"
+                     style="background: linear-gradient(180deg, #e31e26 0%, #b81a21 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), 0 8px 28px rgba(227, 30, 38, 0.5);">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="white" aria-hidden="true" style="margin-left: 3px;"><path d="M8 5v14l11-7L8 5z"/></svg>
+                </div>
+              </div>
+            </a>
+            <div class="p-5">
+              <h3 class="font-display text-sm font-bold uppercase tracking-btn-sm leading-tight">A História de Imigrante</h3>
+              <p class="text-xs text-text-soft mt-1">Dá O Papo · Suely Lessa</p>
+            </div>
+          </article>
+
+          <!-- VÍDEO 3 -->
+          <article class="card reveal">
+            <a href="https://www.instagram.com/vvstudios.pt/" target="_blank" rel="noopener"
+               data-cta="video-3" data-section="videos"
+               class="block relative aspect-video bg-black overflow-hidden group/video">
+              <img src="podcast-3-recomeco.jpg"
+                   alt="Dá O Papo Podcast — O Recomeço em Portugal com Caroline Rodrigues"
+                   width="1280" height="720"
+                   class="w-full h-full object-cover transition-transform duration-700 group-hover/video:scale-105"
+                   loading="lazy" decoding="async" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-16 h-16 rounded-full flex items-center justify-center transition-all duration-500 group-hover/video:scale-110"
+                     style="background: linear-gradient(180deg, #e31e26 0%, #b81a21 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), 0 8px 28px rgba(227, 30, 38, 0.5);">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="white" aria-hidden="true" style="margin-left: 3px;"><path d="M8 5v14l11-7L8 5z"/></svg>
+                </div>
+              </div>
+            </a>
+            <div class="p-5">
+              <h3 class="font-display text-sm font-bold uppercase tracking-btn-sm leading-tight">O Recomeço em Portugal</h3>
+              <p class="text-xs text-text-soft mt-1">Dá O Papo · Caroline Rodrigues</p>
+            </div>
+          </article>
+
+          <!-- VÍDEO 4 -->
+          <article class="card reveal">
+            <a href="https://www.instagram.com/vvstudios.pt/" target="_blank" rel="noopener"
+               data-cta="video-4" data-section="videos"
+               class="block relative aspect-video bg-black overflow-hidden group/video">
+              <img src="podcast-4-sabotando.jpg"
+                   alt="Dá O Papo Podcast — Você Tá Se Sabotando! com Fred Martins"
+                   width="1280" height="720"
+                   class="w-full h-full object-cover transition-transform duration-700 group-hover/video:scale-105"
+                   loading="lazy" decoding="async" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-16 h-16 rounded-full flex items-center justify-center transition-all duration-500 group-hover/video:scale-110"
+                     style="background: linear-gradient(180deg, #e31e26 0%, #b81a21 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), 0 8px 28px rgba(227, 30, 38, 0.5);">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="white" aria-hidden="true" style="margin-left: 3px;"><path d="M8 5v14l11-7L8 5z"/></svg>
+                </div>
+              </div>
+            </a>
+            <div class="p-5">
+              <h3 class="font-display text-sm font-bold uppercase tracking-btn-sm leading-tight">Você Tá Se Sabotando!</h3>
+              <p class="text-xs text-text-soft mt-1">Dá O Papo · Fred Martins</p>
+            </div>
+          </article>
+
+          <!-- VÍDEO 5 -->
+          <article class="card reveal">
+            <a href="https://www.instagram.com/vvstudios.pt/" target="_blank" rel="noopener"
+               data-cta="video-5" data-section="videos"
+               class="block relative aspect-video bg-black overflow-hidden group/video">
+              <img src="podcast-5-amazon.jpg"
+                   alt="Dá O Papo Podcast — Vender na Amazon não é sorte, é método com Levi Guimarães"
+                   width="1280" height="720"
+                   class="w-full h-full object-cover transition-transform duration-700 group-hover/video:scale-105"
+                   loading="lazy" decoding="async" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-16 h-16 rounded-full flex items-center justify-center transition-all duration-500 group-hover/video:scale-110"
+                     style="background: linear-gradient(180deg, #e31e26 0%, #b81a21 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), 0 8px 28px rgba(227, 30, 38, 0.5);">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="white" aria-hidden="true" style="margin-left: 3px;"><path d="M8 5v14l11-7L8 5z"/></svg>
+                </div>
+              </div>
+            </a>
+            <div class="p-5">
+              <h3 class="font-display text-sm font-bold uppercase tracking-btn-sm leading-tight">Vender na Amazon não é sorte, é método</h3>
+              <p class="text-xs text-text-soft mt-1">Dá O Papo · Levi Guimarães</p>
+            </div>
+          </article>
+
+          <!-- VÍDEO 6 -->
+          <article class="card reveal">
+            <a href="https://www.instagram.com/vvstudios.pt/" target="_blank" rel="noopener"
+               data-cta="video-6" data-section="videos"
+               class="block relative aspect-video bg-black overflow-hidden group/video">
+              <img src="podcast-6-chamado.jpg"
+                   alt="Dá O Papo Podcast — Qual o Teu Chamado? com Gabriel Lucena"
+                   width="1280" height="720"
+                   class="w-full h-full object-cover transition-transform duration-700 group-hover/video:scale-105"
+                   loading="lazy" decoding="async" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-16 h-16 rounded-full flex items-center justify-center transition-all duration-500 group-hover/video:scale-110"
+                     style="background: linear-gradient(180deg, #e31e26 0%, #b81a21 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), 0 8px 28px rgba(227, 30, 38, 0.5);">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="white" aria-hidden="true" style="margin-left: 3px;"><path d="M8 5v14l11-7L8 5z"/></svg>
+                </div>
+              </div>
+            </a>
+            <div class="p-5">
+              <h3 class="font-display text-sm font-bold uppercase tracking-btn-sm leading-tight">Qual o Teu Chamado?</h3>
+              <p class="text-xs text-text-soft mt-1">Dá O Papo · Gabriel Lucena</p>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="mt-12 text-center">
+          <a href="https://www.instagram.com/vvstudios.pt/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-xs uppercase tracking-btn font-semibold text-text-soft hover:text-white transition">
+            Ver mais no Instagram <span class="text-red-500">@vvstudios.pt</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ESPAÇO ===== -->
+    <section id="espaco" class="py-24 md:py-32 bg-card grain relative">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <div class="max-w-2xl mb-14">
+          <div class="eyebrow mb-5">O Estúdio</div>
+          <h2 class="font-display text-4xl md:text-6xl leading-[1] tracking-display mb-5 reveal">
+            EQUIPADO PARA<br/>
+            PARECER <span class="text-red-500">PROFISSIONAL</span>.
+          </h2>
+          <p class="text-text-muted text-lg leading-relaxed reveal" data-reveal-delay="100">
+            4 câmeras Full HD, 4 microfones broadcast, 4 softboxes profissionais.
+            TV 55" de apoio e técnico audiovisual incluído em todos os planos.
+          </p>
+        </div>
+
+        <!-- Magazine 5/7 grid -->
+        <div class="grid grid-cols-12 gap-4">
+
+          <!-- TODO: substituir picsum por fotos reais -->
+
+          <div class="col-span-12 lg:col-span-7 flex flex-col gap-4 reveal">
+            <figure class="relative">
+              <div class="aspect-[16/10] overflow-hidden bg-black">
+                <img src="fig-01-vista-principal.jpg"
+                     alt="Vista principal do estúdio VV Studios — cyclorama, softboxes e lounge"
+                     width="1600" height="1067"
+                     class="w-full h-full object-cover photo-treatment"
+                     loading="lazy" decoding="async" />
+              </div>
+              <figcaption class="mt-3 flex items-center gap-3 text-[11px] uppercase tracking-btn font-semibold text-text-soft">
+                <span class="text-red-500">FIG. 01</span>
+                <span class="w-px h-3 bg-text-soft/40"></span>
+                <span>Vista principal · 4 câmeras Full HD</span>
+              </figcaption>
+            </figure>
+
+            <!-- Card de specs preenche o espaço vazio + dá info adicional -->
+            <div class="card p-6 md:p-8 flex-1 flex flex-col justify-center">
+              <p class="text-[11px] uppercase tracking-btn font-semibold text-red-500 mb-5">Equipamento incluído</p>
+              <div class="grid grid-cols-2 gap-5">
+                <div>
+                  <div class="font-display text-4xl md:text-5xl font-extrabold tracking-display text-white">4</div>
+                  <div class="text-[11px] uppercase tracking-btn text-text-soft mt-1.5">Câmeras Full HD</div>
+                </div>
+                <div>
+                  <div class="font-display text-4xl md:text-5xl font-extrabold tracking-display text-white">4</div>
+                  <div class="text-[11px] uppercase tracking-btn text-text-soft mt-1.5">Microfones Broadcast</div>
+                </div>
+                <div>
+                  <div class="font-display text-4xl md:text-5xl font-extrabold tracking-display text-white">4</div>
+                  <div class="text-[11px] uppercase tracking-btn text-text-soft mt-1.5">Softboxes Profissionais</div>
+                </div>
+                <div>
+                  <div class="font-display text-4xl md:text-5xl font-extrabold tracking-display text-white">55<span class="text-2xl">"</span></div>
+                  <div class="text-[11px] uppercase tracking-btn text-text-soft mt-1.5">TV de Apoio</div>
+                </div>
+              </div>
+              <p class="text-xs text-text-soft mt-5 pt-5 border-t border-line-soft">
+                + Técnico audiovisual incluído em todos os planos · Cyclorama branco + green screen disponíveis
+              </p>
+            </div>
+          </div>
+
+          <div class="col-span-12 lg:col-span-5 grid grid-cols-1 gap-4">
+            <figure class="reveal">
+              <div class="aspect-[4/3] overflow-hidden bg-black">
+                <img src="fig-02-microfones.jpg"
+                     alt="Microfone broadcast com iluminação cinematográfica"
+                     width="1200" height="800"
+                     class="w-full h-full object-cover photo-treatment"
+                     loading="lazy" decoding="async" />
+              </div>
+              <figcaption class="mt-3 flex items-center gap-3 text-[11px] uppercase tracking-btn font-semibold text-text-soft">
+                <span class="text-red-500">FIG. 02</span>
+                <span class="w-px h-3 bg-text-soft/40"></span>
+                <span>Microfones broadcast</span>
+              </figcaption>
+            </figure>
+            <figure class="reveal">
+              <div class="aspect-[4/3] overflow-hidden bg-black">
+                <img src="fig-03-iluminacao.jpg"
+                     alt="Iluminação softbox profissional + green screen"
+                     width="1200" height="800"
+                     class="w-full h-full object-cover photo-treatment"
+                     loading="lazy" decoding="async" />
+              </div>
+              <figcaption class="mt-3 flex items-center gap-3 text-[11px] uppercase tracking-btn font-semibold text-text-soft">
+                <span class="text-red-500">FIG. 03</span>
+                <span class="w-px h-3 bg-text-soft/40"></span>
+                <span>Iluminação softbox profissional</span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <figure class="col-span-12 md:col-span-4 relative reveal">
+            <div class="aspect-[4/5] overflow-hidden bg-black">
+              <img src="fig-04-camera.jpg"
+                   alt="Câmera Sony Full HD com lâmpada Edison no estúdio podcast"
+                   width="900" height="1350"
+                   class="w-full h-full object-cover photo-treatment"
+                   loading="lazy" decoding="async" />
+            </div>
+            <figcaption class="mt-3 flex items-center gap-3 text-[11px] uppercase tracking-btn font-semibold text-text-soft">
+              <span class="text-red-500">FIG. 04</span>
+              <span class="w-px h-3 bg-text-soft/40"></span>
+              <span>Câmera Full HD</span>
+            </figcaption>
+          </figure>
+
+          <figure class="col-span-12 md:col-span-4 relative reveal">
+            <div class="aspect-[4/5] overflow-hidden bg-black">
+              <img src="fig-05-bancada.jpg"
+                   alt="Bancada do podcast com microfone broadcast e luz ambiente"
+                   width="900" height="1350"
+                   class="w-full h-full object-cover photo-treatment"
+                   loading="lazy" decoding="async" />
+            </div>
+            <figcaption class="mt-3 flex items-center gap-3 text-[11px] uppercase tracking-btn font-semibold text-text-soft">
+              <span class="text-red-500">FIG. 05</span>
+              <span class="w-px h-3 bg-text-soft/40"></span>
+              <span>Bancada · microfone broadcast</span>
+            </figcaption>
+          </figure>
+
+          <figure class="col-span-12 md:col-span-4 relative reveal">
+            <div class="aspect-[4/5] overflow-hidden bg-black">
+              <img src="fig-06-ambiente.jpg"
+                   alt="Ambiente moody do estúdio com microfone e iluminação cénica"
+                   width="900" height="1350"
+                   class="w-full h-full object-cover photo-treatment"
+                   loading="lazy" decoding="async" />
+            </div>
+            <figcaption class="mt-3 flex items-center gap-3 text-[11px] uppercase tracking-btn font-semibold text-text-soft">
+              <span class="text-red-500">FIG. 06</span>
+              <span class="w-px h-3 bg-text-soft/40"></span>
+              <span>Ambiente cinematográfico</span>
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PLANOS ===== -->
+    <section id="planos" class="py-24 md:py-32">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <div class="eyebrow mb-5 justify-center" style="display:inline-flex">Planos</div>
+          <h2 class="font-display text-4xl md:text-6xl leading-[1] tracking-display mb-5 reveal">
+            ESCOLHE O PLANO<br/>
+            <span class="text-red-500">DO TEU PODCAST</span>.
+          </h2>
+          <p class="text-text-muted text-lg leading-relaxed reveal" data-reveal-delay="100">
+            Três planos pensados para diferentes necessidades.<br/>
+            <span class="text-white">Pede orçamento personalizado via WhatsApp.</span>
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
+
+          <!-- SILVER -->
+          <article class="card p-8 flex flex-col reveal">
+            <div class="mb-6 pb-6 border-b border-line-soft">
+              <h3 class="font-display text-2xl font-bold uppercase tracking-tight-h mb-1">Silver</h3>
+              <p class="text-xs uppercase tracking-btn text-text-soft">Para começar com qualidade</p>
+            </div>
+
+            <div class="mb-6">
+              <div class="flex items-baseline gap-2 mb-2">
+                <span class="font-display text-3xl md:text-4xl font-extrabold tracking-display">Sob consulta</span>
+              </div>
+              <p class="text-xs uppercase tracking-btn-sm text-text-soft">
+                Pede orçamento personalizado
+              </p>
+            </div>
+
+            <ul class="space-y-3 text-sm flex-1 mb-8">
+              <li class="flex items-start gap-3"><span class="text-red-500 mt-0.5">✓</span><span>40 min de gravação</span></li>
+              <li class="flex items-start gap-3"><span class="text-red-500 mt-0.5">✓</span><span>3 câmeras Full HD</span></li>
+              <li class="flex items-start gap-3"><span class="text-red-500 mt-0.5">✓</span><span>Até 2 pessoas</span></li>
+              <li class="flex items-start gap-3"><span class="text-red-500 mt-0.5">✓</span><span>2 microfones</span></li>
+              <li class="flex items-start gap-3"><span class="text-red-500 mt-0.5">✓</span><span>3 cortes para redes</span></li>
+              <li class="flex items-start gap-3"><span class="text-red-500 mt-0.5">✓</span><span>Ficheiro bruto em 24h</span></li>
+              <li class="flex items-start gap-3 text-text-soft"><span class="mt-0.5">✕</span><span>Edição não incluída</span></li>
+            </ul>
+
+            <a href="https://wa.link/0ztgvz" target="_blank" rel="noopener"
+               data-cta="plano-silver" data-section="planos"
+               class="btn btn-secondary w-full">Pedir Orçamento Silver</a>
+          </article>
+
+          <!-- GOLD -->
+          <article class="card p-8 flex flex-col reveal">
+            <div class="mb-6 pb-6 border-b border-line-soft">
+              <h3 class="font-display text-2xl font-bold uppercase tracking-tight-h mb-1">Gold</h3>
+              <p class="text-xs uppercase tracking-btn text-text-soft">Mais tempo, mais convidados</p>
+            </div>
+
+            <div class="mb-6">
+              <div class="flex items-baseline gap-2 mb-2">
+                <span class="font-display text-3xl md:text-4xl font-extrabold tracking-display">Sob consulta</span>
+              </div>
+              <p class="text-xs uppercase tracking-btn-sm text-text-soft">
+                Pede orçamento personalizado
+              </p>
+            </div>
+
+            <ul class="space-y-3 text-sm flex-1 mb-8">
+              <li class="flex items-start gap-3"><span class="text-red-500 mt-0.5">✓</span><span>1 hora de gravação</span></li>
+              <li class="flex items-start gap-3"><span class="text-red-500 mt-0.5">✓</span><span>3 câmeras Full HD</span></li>
+              <li class="flex items-start gap-3"><span class="text-red-500 mt-0.5">✓</span><span>Até 3 pessoas</span></li>
+              <li class="flex items-start gap-3"><span class="text-red-500 mt-0.5">✓</span><span>3 microfones</span></li>
+              <li class="flex items-start gap-3"><span class="text-red-500 mt-0.5">✓</span><span>Ficheiro bruto em 24h</span></li>
+              <li class="flex items-start gap-3 text-text-soft"><span class="mt-0.5">✕</span><span>Edição não incluída</span></li>
+              <li class="flex items-start gap-3 text-text-soft"><span class="mt-0.5">✕</span><span>Cortes redes: +15€/cada</span></li>
+            </ul>
+
+            <a href="https://wa.link/0ztgvz" target="_blank" rel="noopener"
+               data-cta="plano-gold" data-section="planos"
+               class="btn btn-secondary w-full">Pedir Orçamento Gold</a>
+          </article>
+
+          <!-- PREMIUM (highlighted) -->
+          <article class="card p-8 flex flex-col reveal relative" style="border: 1px solid #e31e26; background: linear-gradient(180deg, rgba(227,30,38,0.08), #141414 60%); overflow: visible;">
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2 badge-red whitespace-nowrap z-10">
+              Mais Popular
+            </div>
+
+            <div class="mb-6 pb-6 border-b border-line-soft">
+              <h3 class="font-display text-2xl font-bold uppercase tracking-tight-h mb-1">Premium</h3>
+              <p class="text-xs uppercase tracking-btn text-text-soft">Tudo incluído. Pronto para publicar.</p>
+            </div>
+
+            <div class="mb-6">
+              <div class="flex items-baseline gap-2 mb-2">
+                <span class="font-display text-3xl md:text-4xl font-extrabold tracking-display text-red-500">Sob consulta</span>
+              </div>
+              <p class="text-xs uppercase tracking-btn-sm text-text-soft">
+                Pede orçamento personalizado
+              </p>
+            </div>
+
+            <ul class="space-y-3 text-sm flex-1 mb-8">
+              <li class="flex items-start gap-3"><span class="text-red-500 mt-0.5">✓</span><span><strong class="text-white">1 hora</strong> de gravação</span></li>
+              <li class="flex items-start gap-3"><span class="text-red-500 mt-0.5">✓</span><span><strong class="text-white">4 câmeras</strong> Full HD</span></li>
+              <li class="flex items-start gap-3"><span class="text-red-500 mt-0.5">✓</span><span>Até <strong class="text-white">4 pessoas</strong></span></li>
+              <li class="flex items-start gap-3"><span class="text-red-500 mt-0.5">✓</span><span><strong class="text-white">4 microfones</strong></span></li>
+              <li class="flex items-start gap-3"><span class="text-red-500 mt-0.5">✓</span><span><strong class="text-white">Episódio editado</strong> em 3 dias</span></li>
+              <li class="flex items-start gap-3"><span class="text-red-500 mt-0.5">✓</span><span><strong class="text-white">5 fotos</strong> profissionais</span></li>
+              <li class="flex items-start gap-3"><span class="text-red-500 mt-0.5">✓</span><span><strong class="text-white">3 cortes</strong> para redes</span></li>
+              <li class="flex items-start gap-3"><span class="text-red-500 mt-0.5">✓</span><span><strong class="text-white">Logótipo</strong> incluído</span></li>
+            </ul>
+
+            <a href="https://wa.link/0ztgvz" target="_blank" rel="noopener"
+               data-cta="plano-premium" data-section="planos"
+               class="btn btn-primary w-full">
+              Pedir Orçamento Premium →
+            </a>
+          </article>
+
+        </div>
+
+        <!-- Serviços adicionais -->
+        <div class="mt-12 max-w-3xl mx-auto card p-6 md:p-8">
+          <p class="text-xs uppercase tracking-btn font-semibold text-text-soft mb-5">Serviços Adicionais Disponíveis</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-y-3 gap-x-8 text-sm">
+            <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-red-500" style="box-shadow: 0 0 8px rgba(227, 30, 38, 0.6);"></span><span class="text-text-muted">Criação de Logótipo</span></div>
+            <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-red-500" style="box-shadow: 0 0 8px rgba(227, 30, 38, 0.6);"></span><span class="text-text-muted">Animação de Logótipo</span></div>
+            <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-red-500" style="box-shadow: 0 0 8px rgba(227, 30, 38, 0.6);"></span><span class="text-text-muted">Cortes extra para redes sociais</span></div>
+            <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-red-500" style="box-shadow: 0 0 8px rgba(227, 30, 38, 0.6);"></span><span class="text-text-muted">Produção fotográfica</span></div>
+          </div>
+          <p class="text-xs text-text-soft mt-6 pt-5 border-t border-line-soft text-center">
+            Todos os serviços adicionais sob consulta · Pede info no WhatsApp
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BANNER MEIO ===== -->
+    <section class="bg-red-500 py-14 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-20">
+        <img src="cta-final-bg.jpg" alt="" class="w-full h-full object-cover photo-treatment" loading="lazy" width="1600" height="1067" />
+      </div>
+      <div class="relative max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="text-center md:text-left">
+          <p class="font-display text-3xl md:text-4xl font-extrabold text-white leading-[1.05] tracking-display uppercase">
+            "Em 1h gravas.<br/>
+            Em 3 dias está pronto."
+          </p>
+          <p class="text-white/80 text-xs uppercase tracking-btn font-semibold mt-3">Plano Premium · VV Studios</p>
+        </div>
+        <a href="https://wa.link/0ztgvz" target="_blank" rel="noopener"
+           data-cta="mid-cta" data-section="mid-banner"
+           class="btn bg-white text-red-500 border-white hover:bg-white/90 whitespace-nowrap">
+          Quero Reservar →
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== AVALIAÇÕES (carousel infinito) ===== -->
+    <section id="avaliacoes" class="py-24 md:py-32 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 mb-12">
+        <div class="max-w-2xl">
+          <div class="eyebrow mb-5">Avaliações</div>
+          <h2 class="font-display text-4xl md:text-6xl leading-[1] tracking-display mb-5 reveal">
+            QUEM GRAVA AQUI<br/>
+            <span class="text-red-500">RECOMENDA</span>.
+          </h2>
+          <p class="text-text-muted text-lg leading-relaxed reveal" data-reveal-delay="100">
+            Criadores, marcas e podcasters que escolheram a VV Studios.
+          </p>
+        </div>
+      </div>
+
+      <!-- Carousel infinito -->
+      <div class="scroller" aria-label="Avaliações de clientes">
+        <ul class="scroller__inner list-none p-0 m-0">
+
+          <!-- 1 -->
+          <li class="testi-card">
+            <div>
+              <div class="flex items-center gap-1 mb-5" aria-label="5 estrelas">
+                <span class="star text-lg">★</span><span class="star text-lg">★</span><span class="star text-lg">★</span><span class="star text-lg">★</span><span class="star text-lg">★</span>
+              </div>
+              <blockquote class="text-sm leading-[1.6] font-normal text-gray-100">
+                "Gravei os primeiros 12 episódios do meu podcast aqui. A diferença em qualidade entre amador e profissional foi imediata — o áudio dos microfones broadcast é doutro mundo."
+              </blockquote>
+            </div>
+            <div class="flex items-center gap-3 pt-5 mt-6 border-t border-line-soft">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center font-display font-bold text-white text-sm shrink-0">IM</div>
+              <div class="min-w-0">
+                <p class="font-bold text-sm text-gray-300 truncate">Inês Marques</p>
+                <p class="text-xs italic text-gray-500 truncate">Mentes em Movimento Podcast</p>
+              </div>
+            </div>
+          </li>
+
+          <!-- 2 -->
+          <li class="testi-card">
+            <div>
+              <div class="flex items-center gap-1 mb-5" aria-label="5 estrelas">
+                <span class="star text-lg">★</span><span class="star text-lg">★</span><span class="star text-lg">★</span><span class="star text-lg">★</span><span class="star text-lg">★</span>
+              </div>
+              <blockquote class="text-sm leading-[1.6] font-normal text-gray-100">
+                "Faço marketing há 8 anos e nunca tinha visto um setup tão pronto. Cheguei com o convidado, gravámos 1h, recebi o episódio editado em 3 dias. Worth every cent."
+              </blockquote>
+            </div>
+            <div class="flex items-center gap-3 pt-5 mt-6 border-t border-line-soft">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-red-600 to-red-700 flex items-center justify-center font-display font-bold text-white text-sm shrink-0">JS</div>
+              <div class="min-w-0">
+                <p class="font-bold text-sm text-gray-300 truncate">João Pedro Santos</p>
+                <p class="text-xs italic text-gray-500 truncate">Founder · Falamos de Negócio</p>
+              </div>
+            </div>
+          </li>
+
+          <!-- 3 -->
+          <li class="testi-card">
+            <div>
+              <div class="flex items-center gap-1 mb-5" aria-label="5 estrelas">
+                <span class="star text-lg">★</span><span class="star text-lg">★</span><span class="star text-lg">★</span><span class="star text-lg">★</span><span class="star text-lg">★</span>
+              </div>
+              <blockquote class="text-sm leading-[1.6] font-normal text-gray-100">
+                "Tinha medo da técnica e do equipamento. A equipa da VV Studios resolveu tudo — só tive de aparecer e conversar. Exatamente o que prometem. Já agendei mais 5 episódios."
+              </blockquote>
+            </div>
+            <div class="flex items-center gap-3 pt-5 mt-6 border-t border-line-soft">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center font-display font-bold text-white text-sm shrink-0">MO</div>
+              <div class="min-w-0">
+                <p class="font-bold text-sm text-gray-300 truncate">Mariana Oliveira</p>
+                <p class="text-xs italic text-gray-500 truncate">Coach & Autora</p>
+              </div>
+            </div>
+          </li>
+
+          <!-- 4 -->
+          <li class="testi-card">
+            <div>
+              <div class="flex items-center gap-1 mb-5" aria-label="5 estrelas">
+                <span class="star text-lg">★</span><span class="star text-lg">★</span><span class="star text-lg">★</span><span class="star text-lg">★</span><span class="star text-lg">★</span>
+              </div>
+              <blockquote class="text-sm leading-[1.6] font-normal text-gray-100">
+                "Precisávamos de gravar conteúdo de marca em vídeo + áudio. As 4 câmeras Full HD permitem cortes dinâmicos para Reels e Shorts sem precisar de segunda gravação. Operação genial."
+              </blockquote>
+            </div>
+            <div class="flex items-center gap-3 pt-5 mt-6 border-t border-line-soft">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-red-700 to-red-500 flex items-center justify-center font-display font-bold text-white text-sm shrink-0">AC</div>
+              <div class="min-w-0">
+                <p class="font-bold text-sm text-gray-300 truncate">André Carvalho</p>
+                <p class="text-xs italic text-gray-500 truncate">Marketing Manager · Brand B2B</p>
+              </div>
+            </div>
+          </li>
+
+          <!-- 5 -->
+          <li class="testi-card">
+            <div>
+              <div class="flex items-center gap-1 mb-5" aria-label="5 estrelas">
+                <span class="star text-lg">★</span><span class="star text-lg">★</span><span class="star text-lg">★</span><span class="star text-lg">★</span><span class="star text-lg">★</span>
+              </div>
+              <blockquote class="text-sm leading-[1.6] font-normal text-gray-100">
+                "Já gravei em estúdios em Lisboa e Porto. Pelo que a VV Studios oferece em Guimarães, e com edição incluída no Premium, foi a melhor decisão do ano para o meu podcast."
+              </blockquote>
+            </div>
+            <div class="flex items-center gap-3 pt-5 mt-6 border-t border-line-soft">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center font-display font-bold text-white text-sm shrink-0">SR</div>
+              <div class="min-w-0">
+                <p class="font-bold text-sm text-gray-300 truncate">Sofia Ribeiro</p>
+                <p class="text-xs italic text-gray-500 truncate">Jornalista & Podcaster</p>
+              </div>
+            </div>
+          </li>
+
+          <!-- 6 -->
+          <li class="testi-card">
+            <div>
+              <div class="flex items-center gap-1 mb-5" aria-label="5 estrelas">
+                <span class="star text-lg">★</span><span class="star text-lg">★</span><span class="star text-lg">★</span><span class="star text-lg">★</span><span class="star text-lg">★</span>
+              </div>
+              <blockquote class="text-sm leading-[1.6] font-normal text-gray-100">
+                "Os 3 cortes prontos para Instagram e TikTok que vêm com o plano poupam-me horas. Posto o episódio completo + 3 reels da mesma sessão. Workflow perfeito para criadores."
+              </blockquote>
+            </div>
+            <div class="flex items-center gap-3 pt-5 mt-6 border-t border-line-soft">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-red-600 to-red-500 flex items-center justify-center font-display font-bold text-white text-sm shrink-0">TC</div>
+              <div class="min-w-0">
+                <p class="font-bold text-sm text-gray-300 truncate">Tiago Costa</p>
+                <p class="text-xs italic text-gray-500 truncate">Creator · 80k seguidores</p>
+              </div>
+            </div>
+          </li>
+
+          <!-- 7 -->
+          <li class="testi-card">
+            <div>
+              <div class="flex items-center gap-1 mb-5" aria-label="5 estrelas">
+                <span class="star text-lg">★</span><span class="star text-lg">★</span><span class="star text-lg">★</span><span class="star text-lg">★</span><span class="star text-lg">★</span>
+              </div>
+              <blockquote class="text-sm leading-[1.6] font-normal text-gray-100">
+                "Quando vi tudo o que vinha no Premium — edição, fotos profissionais, cortes para redes, até logótipo — percebi que vale 3× o investimento. Recomendo a olhos fechados."
+              </blockquote>
+            </div>
+            <div class="flex items-center gap-3 pt-5 mt-6 border-t border-line-soft">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-red-700 to-red-600 flex items-center justify-center font-display font-bold text-white text-sm shrink-0">BA</div>
+              <div class="min-w-0">
+                <p class="font-bold text-sm text-gray-300 truncate">Beatriz Almeida</p>
+                <p class="text-xs italic text-gray-500 truncate">Educadora · Podcast Aprender</p>
+              </div>
+            </div>
+          </li>
+
+          <!-- 8 -->
+          <li class="testi-card">
+            <div>
+              <div class="flex items-center gap-1 mb-5" aria-label="5 estrelas">
+                <span class="star text-lg">★</span><span class="star text-lg">★</span><span class="star text-lg">★</span><span class="star text-lg">★</span><span class="star text-lg">★</span>
+              </div>
+              <blockquote class="text-sm leading-[1.6] font-normal text-gray-100">
+                "Como agência usamos para gravar conteúdo dos nossos clientes. A flexibilidade do espaço (podcast, talking-head, entrevistas) torna-o multifuncional. Espaço top em Guimarães."
+              </blockquote>
+            </div>
+            <div class="flex items-center gap-3 pt-5 mt-6 border-t border-line-soft">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center font-display font-bold text-white text-sm shrink-0">DF</div>
+              <div class="min-w-0">
+                <p class="font-bold text-sm text-gray-300 truncate">Diogo Ferreira</p>
+                <p class="text-xs italic text-gray-500 truncate">Founder · Agência criativa</p>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+      <p class="mt-10 text-center text-xs uppercase tracking-btn font-semibold text-text-soft px-6">
+        Aceitando reservas · Janelas limitadas por capacidade técnica
+      </p>
+    </section>
+
+    <!-- ===== CTA FINAL ===== -->
+    <section class="relative py-32 md:py-40 overflow-hidden">
+      <div class="absolute inset-0 -z-10">
+        <img src="cta-final-bg.jpg"
+             alt="" width="1600" height="1067"
+             class="w-full h-full object-cover photo-treatment"
+             loading="lazy" decoding="async" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/85 to-ink/30"></div>
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-red-500/20 blur-[120px]"></div>
+      </div>
+
+      <div class="relative max-w-3xl mx-auto px-6 text-center">
+
+        <div class="flex items-center justify-center gap-3 mb-8">
+          <span class="w-12 h-px bg-red-500"></span>
+          <span class="text-xs uppercase tracking-btn font-semibold text-red-500" style="letter-spacing: 0.16em">Vamos Gravar</span>
+          <span class="w-12 h-px bg-red-500"></span>
+        </div>
+
+        <h2 class="font-display text-4xl md:text-6xl lg:text-7xl leading-[1] tracking-display mb-8">
+          O TEU PRÓXIMO<br/>
+          EPISÓDIO COMEÇA<br/>
+          <span class="text-red-500">COM UM WHATSAPP</span>.
+        </h2>
+
+        <p class="text-text-muted text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+          Resposta em poucos minutos. Conta-nos o que pretendes gravar e ajustamos o plano à tua medida.
+        </p>
+
+        <a href="https://wa.link/0ztgvz" target="_blank" rel="noopener"
+           data-cta="footer-whatsapp" data-section="cta-final"
+           class="btn btn-wa btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.099-.473-.149-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.971.999-3.648-.235-.374a9.86 9.86 0 01-1.511-5.26c.002-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Reservar pelo WhatsApp
+        </a>
+
+        <p class="mt-10 text-xs uppercase tracking-btn font-semibold text-text-soft">
+          Av. São Gonçalo 81 LJ 14 · 4810-428 Guimarães<br class="md:hidden"/>
+          <span class="hidden md:inline"> · </span>
+          <a href="https://www.instagram.com/vvstudios.pt/" target="_blank" rel="noopener" class="hover:text-white transition">@vvstudios.pt</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="border-t border-line-soft bg-ink py-14">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
+
+      <div>
+        <img src="Logo%20VV%20Studio/Logo%20att.png"
+             alt="VV Studios — Podcast & Mídia"
+             width="220" height="220"
+             class="h-28 w-auto mb-5"
+             loading="lazy" decoding="async" />
+        <p class="text-xs text-text-soft leading-relaxed">
+          Hub de produção audiovisual em Guimarães.<br/>
+          Estúdio profissional para podcasts, fotografia e vídeo.
+        </p>
+      </div>
+
+      <div>
+        <p class="text-[11px] uppercase tracking-btn font-semibold text-white mb-4">Contacto</p>
+        <ul class="space-y-2 text-xs text-text-soft">
+          <li>Av. São Gonçalo 81 LJ 14</li>
+          <li>4810-428 Guimarães</li>
+          <li><a href="https://wa.link/0ztgvz" target="_blank" rel="noopener" class="text-wa hover:text-white transition uppercase tracking-btn font-semibold">WhatsApp →</a></li>
+          <li><a href="https://www.instagram.com/vvstudios.pt/" target="_blank" rel="noopener" class="hover:text-white transition">@vvstudios.pt</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[11px] uppercase tracking-btn font-semibold text-white mb-4">Páginas</p>
+        <ul class="space-y-2 text-xs text-text-soft">
+          <li><a href="#videos" class="hover:text-white transition">Vídeos</a></li>
+          <li><a href="#espaco" class="hover:text-white transition">Estúdio</a></li>
+          <li><a href="#planos" class="hover:text-white transition">Planos</a></li>
+          <li><a href="#avaliacoes" class="hover:text-white transition">Avaliações</a></li>
+          <li><a href="/politica-privacidade" class="hover:text-white transition">Privacidade</a></li>
+          <li><a href="/termos" class="hover:text-white transition">Termos</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-line-soft flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[11px] uppercase tracking-btn font-semibold text-text-soft">
+      <p>© <span id="year">2026</span> VV Studios</p>
+      <p>Reserva 50% adiantado · Restante no dia</p>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const io = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            const delay = e.target.dataset.revealDelay || 0;
+            setTimeout(() => e.target.classList.add('is-visible'), delay);
+            io.unobserve(e.target);
+          }
+        }
+      }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+    }
+
+    // CTA tracking (preencher com Plausible/GA4 em produção)
+    document.addEventListener('click', (e) => {
+      const cta = e.target.closest('[data-cta]');
+      if (!cta) return;
+      const payload = { name: cta.dataset.cta, section: cta.dataset.section };
+      if (window.plausible) plausible('CTA Click', { props: payload });
+      if (window.gtag) gtag('event', 'cta_click', payload);
+    });
+
+    // Infinite carousel — duplicar items SEMPRE para loop seamless (ignora reduced-motion)
+    (function() {
+      const scroller = document.querySelector('.scroller__inner');
+      if (!scroller) return;
+      const items = Array.from(scroller.children);
+      items.forEach(item => {
+        const clone = item.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        scroller.appendChild(clone);
+      });
+      console.log('[carousel] OK ' + items.length + ' items + ' + items.length + ' clones = infinite loop');
+    })();
+
+    // Hero video — versão SIMPLES com logs em todos os steps
+    (function() {
+      console.log('[hero-video] 1. script EXECUTANDO');
+      const video = document.getElementById('hero-video');
+      if (!video) { console.warn('[hero-video] elemento NAO encontrado'); return; }
+      console.log('[hero-video] 2. elemento encontrado');
+
+      // (Removido o bail de prefers-reduced-motion — utilizador quer animacao sempre)
+      // Apenas data saver real ainda pode bloquear (poupa MB ao utilizador em conexao lenta)
+      const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+      if (conn) {
+        console.log('[hero-video] connection:', { saveData: conn.saveData, type: conn.effectiveType });
+        if (conn.saveData) { console.warn('[hero-video] BAIL: data saver ativo'); return; }
+      }
+
+      // Garantir muted
+      video.muted = true;
+      video.defaultMuted = true;
+      video.setAttribute('muted', '');
+
+      console.log('[hero-video] 3. tentando play()...');
+      console.log('[hero-video] estado:', {
+        readyState: video.readyState,
+        currentSrc: video.currentSrc || 'NENHUM (ainda nao escolheu source)',
+        muted: video.muted,
+        paused: video.paused,
+        error: video.error
+      });
+
+      function tryPlay(reason) {
+        const p = video.play();
+        if (p === undefined) { console.warn('[hero-video] play() returned undefined'); return; }
+        p.then(() => console.log('[hero-video] OK A TOCAR (' + reason + ')'))
+         .catch(err => {
+           console.warn('[hero-video] play() falhou:', err.name, '-', err.message);
+           // Fallback: aguarda 1ª interação
+           if (!window.__heroVideoUserListener) {
+             window.__heroVideoUserListener = true;
+             const userPlay = () => {
+               video.play().then(()=>console.log('[hero-video] OK a tocar (apos interacao)'));
+             };
+             document.addEventListener('click', userPlay, { once: true });
+             document.addEventListener('touchstart', userPlay, { once: true });
+             console.log('[hero-video] aguardando clique do utilizador...');
+           }
+         });
+      }
+
+      // Trigger em vários eventos
+      video.addEventListener('loadedmetadata', () => { console.log('[hero-video] evento loadedmetadata'); tryPlay('loadedmetadata'); });
+      video.addEventListener('canplay', () => { console.log('[hero-video] evento canplay'); tryPlay('canplay'); });
+      video.addEventListener('error', e => console.error('[hero-video] ERRO:', video.error));
+
+      // Try direto se já está pronto
+      if (video.readyState >= 2) tryPlay('readyState ready');
+    })();
+  </script>
+
+</body>
+</html>

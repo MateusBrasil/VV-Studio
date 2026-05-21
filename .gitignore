@@ -1,0 +1,23 @@
+# Source files brutos (nao precisam ir para o repo)
+Video Da VV Studio/
+TODAS AS FOTOS DO ESTÚDIO/
+
+# Output de skill design-md (regeneravel)
+design-md-output/
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Dependencias
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
